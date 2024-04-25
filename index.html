@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Luxury Cars</title>
+	<meta name="description" content="Luxury Cars is a platform that bring together potential car buyers at a discounted price.">
+	<!--<meta http-equiv="refresh" content="300">-->
+	<link rel="shortcut icon" href="Images/download.png" type="image/x-icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="luxury.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="luxury.js"></script>
+	<meta name="Database Group" content="author">
+	<meta http-equiv="X-UA-Compatible" content="IE=7">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--HOME SECTION-->
+	<section class="home-page">
+		<div class="navbar">
+			<div class="logo">
+				<a href="index.html">Luxury<span>Cars</span></a>
+			</div>
+			<nav class="menu" id="menuLinks">
+				<ul>
+					<li><a href="index.html" class="active" target="_self" title="Home"><i class="fa-solid fa-house"></i></i>Home</a></li>
+					<li><a href="#view" class="active" target="_self" title="Check Prices"><i class="fa-solid fa-hand-holding-dollar"></i>View Prices</a></li>
+					<li><a href="#buy" class="active" target="_self" title="buy"><i class="fa-brands fa-shopify"></i></i>Buy</a></li>
+					<li><a href="#contact" target="_self" title="Contact me"><i class="fa-solid fa-phone"></i>Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="hero">
+			<div class="hero-photo">
+				<img src="Images/download (1).png" alt="my profile" width="180px" height="180px">
+			</div>
+			<div class="hero-info">
+				<div class="hero-text">
+					<h1>WELCOME TO LUXURY CARS</h1>
+					<p>Where cost matches quality.</p>
+				</div>
+			</div>
+			<div class="brands-section">
+				<div>
+					<h3>Our Brands</h3>
+				</div>
+				<div class="brands">
+					<div>
+						<ul>
+							<li>Mercedes-Benz</li>
+							<li>Volkswagen</li>
+							<li>BMW</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>Audi</li>
+							<li>Toyota</li>
+							<li>Honda</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>Ford</li>
+							<li>Bugatti</li>
+							<li>Jeep</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>Jaguar</li>
+							<li>Chevrolet</li>
+							<li>Lexus</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+<!--CARD SECTION-->
+	<section class="Card" id="buy">
+		<div>
+			<h3>Latest Brands</h3>
+		</div>
+		<div class="row row-cols-1 row-cols-md-3 g-4">
+			<div class="col">
+			  <div class="card h-100">
+				<img src="Images/toyota_landcruiser2_20230802.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Toyota LandCruiser</h5>
+				  <p class="card-text">Toyota Land Cruiser is a renowned line of rugged, full-size SUVs produced by the Japanese automaker Toyota. Known for its legendary durability, off-road capabilities, and versatility</p>
+				  <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>ADD TO CART</a>
+				</div>
+				<div class="card-footer">
+				  <small class="text-body-secondary">Last updated <?php date_default_timezone_set("Africa/Lagos");
+					echo date("h/i/sa"); . date("l");?> ago</small>
+				</div>
+			  </div>
+			</div>
+			<div class="col">
+			  <div class="card h-100">
+				<img src="Images/images (6).jpeg" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">BMW</h5>
+				  <p class="card-text">The BMW XM has 1 Petrol Engine on offer. The Petrol engine is 4395 cc . It is available with Automatic transmission.Depending upon the variant and fuel type the XM has a mileage of 61.9 kmpl . The XM is a 7 seater 8 cylinder car and has length of 5155 mm, width of 2000 mm and a wheelbase of 2651. Less</p>
+				  <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>ADD TO CART</a>
+				</div>
+				<div class="card-footer">
+				  <small class="text-body-secondary">Last updated 3 mins ago<span class="badge text-bg-secondary">New</span></small>
+				</div>
+			  </div>
+			</div>
+			<div class="col">
+			  <div class="card h-100">
+				<img src="Images/AudiRS6Avant performance_Dewsilver_matt088.webp" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Audi</h5>
+				  <p class="card-text">Audi R8 represents the pinnacle of Audi's engineering expertise and performance heritage, embodying the brand's commitment to innovation, craftsmanship, and driving excitement.</p>
+				  <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>ADD TO CART</a>
+				</div>
+				<div class="card-footer">
+				  <small class="text-body-secondary">Last updated 3 mins ago</small>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</section>
+<!--CAROUSEL SECTION-->
+	<section class="carousel-section">
+		<div id="carouselExampleCaptions" class="carousel slide">
+			<div class="carousel-indicators">
+			  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<img src="Images/AudiRS6Avant performance_Dewsilver_matt071.webp" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+				  <h5>Audi Q7</h5>
+				  <p>The Audi Q7 is one of the best three-row luxury SUVs you can buy. It impresses with a lush interior, smooth performance and a comprehensive set of tech features.</p>
+				</div>
+			  </div>
+			  <div class="carousel-item">
+				<img src="Images/2018_Lexus_LX_570_(facelift),_front_3.24.23.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+				  <h5>Lexus LX 600</h5>
+				  <p>Engineered to elevate the driver and drive to unprecedented heights, the 2024 LX is the definitive chapter of flagship luxury.</p>
+				</div>
+			  </div>
+			  <div class="carousel-item">
+				<img src="Images/2015-1711448167744-5518.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+				  <h5>Mercedes</h5>
+				  <p>2024 Mercedes-Benz C-class nonetheless offers a similar experience in a more compact and affordable package. Its deluxe interior is filled with showstoppers, from the premium display screens to the high-end materials that line its seats and door panels.</p>
+				</div>
+			  </div>
+			  <div class="carousel-item">
+				<img src="Images/images (6).jpeg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+				  <h5>BMW XM</h5>
+				  <p>The BMW XM has 1 Petrol Engine on offer. The Petrol engine is 4395 cc.</p>
+				</div>
+			  </div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</section>
+<!--BUY SECTION-->
+<section class="buy-section" id="view">
+	<diV class="buy-section-h3">
+		<h3>Make your Order here</h3>
+	</diV>
+	<diV class="order-section">
+		<diV class="order-table">
+			<div class="filter-table">
+				<div>
+					<p><button class="sort-table" onclick="sortTable()">Sort</button></p>
+				</div>
+				<div>
+					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cars.." title="Type in a name">
+				</div>
+			</div>
+			<table id="myTable">
+				<tr>
+					<th>Brand</th>
+					<th>Price</th>
+					<th>Waranty</th>
+					<th>Qty Available</th>
+				</tr>
+				<tr>
+					<td>Audi</td>
+					<td>Ksh. 10.1M</td>
+					<td>1 Year</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td>Volkswagen</td>
+					<td>Ksh. 7.6M </td>
+					<td>1 Year</td>
+					<td>13</td>
+				</tr>
+				<tr>
+					<td>BMW</td>
+					<td>Ksh. 8M</td>
+					<td>1 Year</td>
+					<td>14</td>
+				</tr>
+				<tr>
+					<td>Jaguar</td>
+					<td>Ksh. 5M </td>
+					<td>1 Year</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>Mercedes-Benz</td>
+					<td>Ksh. 9M</td>
+					<td>1 Year</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<td>Jeep</td>
+					<td>Ksh. 4.7M</td>
+					<td>1 Year</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Ford</td>
+					<td>Ksh. 3.12M</td>
+					<td>1 Year</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td>Toyota</td>
+					<td>Ksh. 1.5M</td>
+					<td>1 Year</td>
+					<td>20</td>
+				<tr>
+					<td>Chevrolet</td>
+					<td>Ksh. 4.1M</td>
+					<td>1 Year</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<td>Bugatti</td>
+					<td>Ksh. 6M</td>
+					<td>1 Year</td>
+					<td>2</td>
+				</tr>
+
+			</table>
+		</diV>
+		<diV class="purchases">
+			<div class="row">
+			<div class="col-75">
+				<div class="container">
+					<form action="luxury.php" method="POST" autocomplete="on">
+						<div class="row">
+							<div class="col-50">
+								<h3>Billing</h3>
+								<!--<span class="input-error">* Required fields.</span>-->
+								<label for="fname"><i class="fa fa-user"></i> Full Name</label>
+								<input type="text" id="fname" name="fullname" placeholder="Enter name" required>
+								<span class="input-error">*</span>
+								<label for="phone"><i class="fa fa-user"></i>Phone No.</label>
+								<input type="tel" id="phone" name="phone" placeholder="Tel. No." required pattern="+254xxx">
+								<span class="input-error">*</span>
+								<label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+								<input type="text" id="adr" name="addressno" placeholder="Your address" required>
+								<!--<span class="input-error">*</span>
+								<label for="taxId"><i class="fa fa-address-card-o"></i> Tax ID</label>
+								<input type="text" id="adr" name="taxId" placeholder="Your Tax ID">-->
+							</div>
+
+							<div class="col-50 right-details">
+								<label for="ID"><i class="fa fa-address-card-o"></i> ID No.</label>
+								<input type="text" id="ID" name="ID" placeholder="Your ID No." required>
+								<span class="input-error">*</span>
+								<label for="email"><i class="fa fa-envelope"></i> Email</label>
+								<input type="text" id="email" name="email" placeholder="someone@example.com" required>
+								<span class="input-error">*</span>
+								<label for="city"><i class="fa fa-institution"></i> City</label>
+								<input type="text" id="city" name="city" placeholder="Nairobi">
+								<div class="row">
+								<div class="col-50">
+									<label for="Brand">Choose Brand</label>
+									<select name="Brand" id="Brand">
+										<option value="Audi">Audi</option>
+										<option value="Jaguar">Jaguar</option>
+										<option value="Jeep">Jeep</option>
+										<option value="Volkswagen">Volkswagen</option>
+										<option value="Lexus">Lexus</option>
+										<option value="Toyota">Toyota</option>
+										<option value="Honda">Honda</option>
+									</select>
+								</div>
+								<div class="col-50">
+									<label for="transmission">Choose Transmission</label>
+									<select name="transmission" id="transmission">
+										<option value="automatic">Automatic</option>
+										<option value="manual">Manual</option>
+									</select>
+								</div>
+								</div>
+							</div>
+							<div class="payment">
+								<h3>Payment</h3>
+								<label for="fname">Accepted Cards</label>
+								<div class="icon-container">
+								<i class="fa fa-cc-visa" style="color:navy;"></i>
+								<i class="fa fa-cc-amex" style="color:blue;"></i>
+								<i class="fa fa-cc-mastercard" style="color:red;"></i>
+								<i class="fa fa-cc-discover" style="color:orange;"></i>
+								</div>
+								<label for="ccnum">Credit card number</label>
+								<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+							</div>
+						</div>
+						<div class="checkbox">
+							<label for="">Confirm that you have entered the correct details before submitting.
+							</label>
+						</div>
+						<div class="btn-buy-reset">
+							<!--<div class="dropdown">
+								<button class="btn btn-primary dropdown-toggle" type="submit" data-bs-toggle="dropdown" aria-expanded="false">
+									Mode of Payment
+								</button>
+								<ul class="dropdown-menu">
+									<li><label class="dropdown-item" type="button">VISA</label></li>
+									<li><label class="dropdown-item" type="button">PAYPAL</label></li>
+									<li><label class="dropdown-item" type="button">MASTERCARD</label></li>
+								</ul>
+							</div>-->
+							<div class="res-chk">
+								<button type="submit" class="btn">Submit</button>
+								<!--<button type="submit" class="btn">Reset</button>-->
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</diV>
+</section>
+<!--CONTACT SECTION-->
+	<section class="contact" id="contact">
+		<div class="contact-header">
+			<h3>Contact Us</h3>
+			<p>Would like to buy your dream car with us? Do not hesitate to contact us. <span> :&#41</span>!</p>
+		</div>
+		<div class="contact-section">
+			<div class="contact-address">
+				<div class="location">
+					<i class="fa-solid fa-location-dot"></i>
+					<span>Nairobi, Kenya</span>
+				</div>
+				<div class="phone">
+					<i class="fa-solid fa-phone"></i>
+					<span>+254790598519/+25458325830</span>
+				</div>
+				<div class="email">
+					<i class="fa-solid fa-envelope"></i>
+					<span>info@luxuryCars.com</span>
+				</div>
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7976.785593850559!2d37.262054699999986!3d-1.531655799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1694436889790!5m2!1sen!2ske" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+			<div class="contact-form">
+				<p>Get in touch</p>
+				<form action="contact.php" name="submit-to-google-sheet" method="post">
+					<div class="form-row">
+						<div class="form-name">
+							<input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
+							<input type="text" name="lastname" id="lastname" placeholder="Lastname" required>
+						</div>
+						<div class="form-contact">
+							<input type="email" name="email" id="email" placeholder="someone@gmail.com" required>
+							<input type="number" name="number" id="number" placeholder="+254-000-453" required>
+						</div>
+					</div>
+					<div class="form-message">
+						<div class="form-subject">
+							<input type="text" name="subject" id="subject" placeholder="subject">
+						</div>
+						<textarea name="message" id="message" rows="10" required></textarea>
+						<div id="liveAlertPlaceholder">
+							<button type="button" class="btn btn-primary" id="liveAlertBtn">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+<!---FOOTER SECTION-->
+	<section class="my-footer">
+		<div class="footer">
+			<div class="footer-links">
+				<div class="social-media-links">
+					<h3>Follow us on</h3>
+					<ul>
+						<li><a href="" target="_blank"><i class="fa-brands fa-twitter"></i>twitter</a></li>
+						<li><a href="" target="_blank"><i class="fa-brands fa-instagram"></i>instagram</a></li>
+						<li><a href=""><i class="fa-brands fa-facebook"></i>facebook</a></li>            
+					</ul>
+				</div>
+				<div class="useful-links">
+					<h3>Extra links</h3>
+					<ul>
+						<li><a href="discount.html"><i class="fa-solid fa-tag"></i>Discount</a></li>
+						<li><a href="community.html"><i class="fa-solid fa-people-group"></i>Our Community</a></li>
+						<li><a href="associates.html"><i class="fa-solid fa-tag"></i>Associates</a></li>
+					</ul>
+				</div>
+			</div>
+		<div class="top"><a href="#top"><i class="fa-solid fa-arrow-up"></i></a></div>
+		</div>
+		<div class="footer-txt">
+			<p>&copy; <?php echo date("Y"); ?> .	All rights reserved. Powered by clean master.</p>
+		</div>
+	</section>
+
+    <script>
+        // Function to toggle the menu open and close
+        function toggleMenu() {
+            var menu = document.getElementById("menuLinks");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+				
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+
+	
+</body>
+</html>
