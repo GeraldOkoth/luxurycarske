@@ -10,10 +10,20 @@
 	<link rel="stylesheet" type="text/css" href="luxury.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="luxury.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></Script> <!--Script to send email-->
 	<meta name="Database Group" content="author">
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
+	<script src="sendEmail.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+	<script type="text/javascript">
+	(function(){
+		emailjs.init({
+			publicKey: "U6FuyV7yh6s35Ewii",
+		});
+	})();
+	</script>
 </head>
 <body>
 <!--HOME SECTION-->
@@ -379,7 +389,7 @@
 			</div>
 			<div class="contact-form">
 				<p>Get in touch</p>
-				<form action="contact.php" name="submit-to-google-sheet" method="post">
+				<form onsubmit="sendMail();" action="" reset(); return false; name="submit-to-google-sheet" method="post">
 					<div class="form-row">
 						<div class="form-name">
 							<input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
@@ -387,16 +397,16 @@
 						</div>
 						<div class="form-contact">
 							<input type="email" name="email" id="email" placeholder="someone@gmail.com" required>
-							<input type="number" name="number" id="number" placeholder="+254-000-453" required>
+							<input type="number" name="phoneNumber" id="phoneNumber" placeholder="+254-000-453" required>
 						</div>
 					</div>
 					<div class="form-message">
 						<div class="form-subject">
-							<input type="text" name="subject" id="subject" placeholder="subject">
+							<input type="text" name="mesgSubject" id="mesgSubject" placeholder="subject">
 						</div>
-						<textarea name="message" id="message" rows="10" required></textarea>
+						<textarea name="msg" id="msg" rows="10" required></textarea>
 						<div id="liveAlertPlaceholder">
-							<button type="button" class="btn btn-primary" id="liveAlertBtn">Submit</button>
+							<button type="submit" onclick="sendMail();" class="btn btn-primary" id="liveAlertBtn">Submit</button>
 						</div>
 					</div>
 				</form>
@@ -431,19 +441,42 @@
 		</div>
 	</section>
 
-    <script>
-        // Function to toggle the menu open and close
-        function toggleMenu() {
-            var menu = document.getElementById("menuLinks");
 
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-				
-            } else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
+<!--Script to send email-->
+<!--Fom Elasticemail.com/SMTPJS.com-->
+<!--This code is not working-->
+<!--<script>
+    function sendMail(){
+        Email.send({
+			SecureToken: "23a0e1b7-6dd7-4f96-8bc3-3819c13aeb02",
+            To : 'okothgerald449@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : document.getElementById("mesgSubject").value,
+            Body : "First Name: " + document.getElementById("firstname").value +
+                    " <br> Last Name: " + document.getElementById("lastname").value +
+                    " <br> Email: " + document.getElementById("email").value +
+                    " <br> Number: " + document.getElementById("phoneNumber").value +
+                    " <br> Subject: " + document.getElementById("mesgSubject").value +
+                    " <br> Message: " + document.getElementById("msg").value
+        }).then(
+        message => alert("message sent successfully!")
+        );
+    }
+</script>-->
+
+<script>
+	// Function to toggle the menu open and close
+	function toggleMenu() {
+		var menu = document.getElementById("menuLinks");
+
+		if (menu.style.display === "block") {
+			menu.style.display = "none";
+			
+		} else {
+			menu.style.display = "block";
+		}
+	}
+</script>
 
 	
 </body>
