@@ -4,11 +4,18 @@ $fullnameErr = $phoneErr = $addressnoErr = $taxIdErr = $IDErr = $emailErr = $cit
 $transmission = "";
 $Brand = "";
 
+function test_input($input) {
+    //$input = trim($input);
+    $input = stripslashes($input);
+    $input = htmlspecialchars($input);
+    return $input;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullname = test_input($_POST["fullname"]);
     $phone = test_input($_POST["phone"]);
     $addressno = test_input($_POST["addressno"]);
-    $taxId = test_input($_POST["taxId"]);
+    //$taxId = test_input($_POST["taxId"]);
     $ID = test_input($_POST["ID"]);
     $email = test_input($_POST["email"]);
     $city = test_input($_POST["city"]);
@@ -36,6 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $valid = false;
     }
 
+    if(empty($taxId)) {
+        $taxIdErr = "Tax Id Rquired!";
+        $valid = false;
+    }
+
     if (empty($ID)) {
         $IDErr = "ID required!";
         $valid = false;
@@ -54,19 +66,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($valid) {
         // Database connection details
-        $host = "localhost";
+        $host = "127.0.0.1";
         $dbUsername = "root";
-        $dbPassword = ""; // Assuming empty password
-        $dbname = "luxury_cars"; // Correct table name
+        $dbPassword = "";
+        $dbname = "luxury_cars";
 
         // Create connection
-        $connection = new mysqli($host, $dbUsername, $dbPassword, $dbname);
-        if ($connection->connect_error) {
-            die('Connection Failed : ' . $connection->connect_error);
+        $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+        if ($conn->connect_error) {
+            die('Connection Failed : ' . $conn->connect_error);
         }
 
         // Prepare and bind
-        $stmt = $connection->prepare("INSERT INTO luxury_cars (fullname, phone, addressno, taxId, ID, email, city, Brand, transmission) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO luxury_cars (fullname, phone, addressno, taxId, ID, email, city, Brand, transmission) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssissssss", $fullname, $phone, $addressno, $taxId, $ID, $email, $city, $Brand, $transmission);
         
         // Execute SQL
@@ -78,14 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Close statement and connection
         $stmt->close();
-        $connection->close();
+        $conn->close();
     }
-}
-
-function test_input($input) {
-    $input = trim($input);
-    $input = stripslashes($input);
-    $input = htmlspecialchars($input);
-    return $input;
 }
 ?>
