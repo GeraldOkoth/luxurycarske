@@ -437,11 +437,14 @@
 		<div class="top"><a href="#top"><i class="fa-solid fa-arrow-up"></i></a></div>
 		</div>
 		<div class="footer-txt">
-			<p>&copy; <?php echo date("Y"); ?> .	All rights reserved. Powered by clean master.</p>
+			<p id="footerYear"> </p>
 		</div>
 	</section>
 
-
+<script>
+	const date = new Date();
+	document.getElementById('footerYear').innerHTML = "&copy;" + date.getFullYear() + " All rights reserved. Powered by clean master.";
+</script>
 <!--Script to send email-->
 <!--Fom Elasticemail.com/SMTPJS.com-->
 <!--This code is not working-->
