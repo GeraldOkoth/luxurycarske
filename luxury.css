@@ -39,7 +39,7 @@ html {
 
 /*style the logo*/
 .logo {
-	padding: .5em 2em;
+	padding: .2em 2em;
 	font: 1.4rem bold;
 	letter-spacing: .17em;
 	text-transform: uppercase;
@@ -105,7 +105,7 @@ html {
 @media screen and (max-width: 660px) {
 	/*style the logo*/
 	.logo {
-		padding: .5em 1em;
+		padding: .1em 1em;
 		font: 1.5rem bold;
 	}
 	/*Style the menu links on small screens*/
@@ -192,11 +192,10 @@ html {
 .brands-section h3 {
 	color: #FE9900;
 	font-size: 2.4rem;
-	font-family: "Brush Script MT", cursive;
+	/* font-family: "Brush Script MT", cursive; */
 }
 
 .brands {
-	color: #3F83E1;
 	width: 80%;
 	margin: 0 auto;
 	display: flex;
@@ -249,8 +248,6 @@ html {
 	background-color: #042ff0;
 }
 
-
-
 .col {
 	transition: .5s;
 }
@@ -281,7 +278,7 @@ html {
 
 /*Style the buy section*/
 .buy-section {
-	background-color: #CAEAD7;
+	background-color: #f1f1f1;
 }
 
 .buy-section-h3 {
@@ -471,7 +468,6 @@ table, th, td {
 .contact {
 	width: 100%;
 	padding: 20px 0;
-	background-color: #f1f1f1;
 }
 
 /*Style the contact header*/
@@ -520,6 +516,7 @@ input {
 	transition: .5s;
 	padding: 12px 14px;
 	background-color: #f1f1f1;
+	box-shadow: 0 0 3px;
 	border-bottom: 1px solid rgb(14, 13, 13);
 }
 
@@ -532,12 +529,14 @@ textarea {
 	outline: none;
 	padding: 12px 14px;
 	border-radius: 5px;
+	box-shadow: 0 0 3px;
 	background-color: #fff;
 }
 
 input:focus {
 	border-radius: 5px;
 	background-color: #fff;
+	box-shadow: unset;
 	border: 1px solid rgb(87, 126, 240);
 }
 
@@ -563,7 +562,8 @@ input:focus {
 	width: 100%;
 	padding: 10px 0;
 	position: relative;
-	background-color: #8780e7;
+	background-color: #f1f1f1;
+
 }
 
 /*Style the footer links*/
@@ -576,18 +576,15 @@ input:focus {
 }
 
 /*Style the 'go back' to top arrow*/
-.top a{
-	right: 10%;
-	width: 30px;
-	bottom: 76px;
-	height: 30px;
-	color: #fff;
-	font-size: 15px;
+.top a {
+	right: 6%;
+	bottom: 40%;
+	color: #c8c5c5;
+	padding: 8px 12px;
 	text-align: center;
 	position: absolute;
-	border-radius: 50%;
-	text-decoration: none;
-	background-color: #000;
+	border-radius: 5px;
+	background-color: dodgerblue
 }
 
 .footer-links li {
@@ -596,13 +593,12 @@ input:focus {
 }
 
 .footer-links a {
-	color: #fff;
 	transition: .4s;
 	text-decoration: none;
 }
 
 .footer-links i {
-	color: #fff;
+	color: #000000;
 	padding-right: 1.2em;
 }
 
@@ -628,7 +624,6 @@ input:focus {
 	margin-top: 2px;
 	font-size: .9em;
 	text-align: center;
-	background-color: #111111;
 }
 
 .footer-txt p {
