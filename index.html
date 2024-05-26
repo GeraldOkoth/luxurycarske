@@ -3,19 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Luxury Cars</title>
+	<meta name="author" content="Database Group">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Luxury Cars is a platform that bring together potential car buyers at a discounted price.">
+	<meta http-equiv="X-UA-Compatible" content="IE=7">
 	<!--<meta http-equiv="refresh" content="300">-->
 	<link rel="shortcut icon" href="Images/download.png" type="image/x-icon">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="luxury.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="luxury.js"></script>
-	<script src="https://smtpjs.com/v3/smtp.js"></Script> <!--Script to send email-->
-	<meta name="Database Group" content="author">
-	<meta http-equiv="X-UA-Compatible" content="IE=7">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="luxury.css">
+	<script src="https://smtpjs.com/v3/smtp.js"></Script> <!--Script to send email-->
 	<script src="sendEmail.js"></script>
+	<script src="luxury.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 	<script type="text/javascript">
 	(function(){
@@ -32,14 +32,31 @@
 			<div class="logo">
 				<a href="index.html">Luxury<span>Cars</span></a>
 			</div>
-			<nav class="menu" id="menuLinks">
+			<nav class="menu sideNav" id="menuLinks">
 				<ul>
-					<li><a href="index.html" class="active" target="_self" title="Home"><i class="fa-solid fa-house"></i></i>Home</a></li>
-					<li><a href="#view" class="active" target="_self" title="Check Prices"><i class="fa-solid fa-hand-holding-dollar"></i>View Prices</a></li>
-					<li><a href="#buy" class="active" target="_self" title="buy"><i class="fa-brands fa-shopify"></i></i>Buy</a></li>
+					<li><a href="index.html" target="_self" title="Home"><i class="fa-solid fa-house"></i></i>Home</a></li>
+					<li><a href="#view" target="_self" title="Check Prices"><i class="fa-solid fa-hand-holding-dollar"></i>View Prices</a></li>
+					<li><a href="#buy" target="_self" title="buy"><i class="fa-brands fa-shopify"></i></i>Buy</a></li>
 					<li><a href="#contact" target="_self" title="Contact me"><i class="fa-solid fa-phone"></i>Contact Us</a></li>
 				</ul>
 			</nav>
+			<div class="hambuger-btn">
+				<span class="hamburger" id="hamburgerOpen" onclick="toggleMenuOpen()">☰</span>
+				<span class="hamburger" id="hamburgerClose" onclick="toggleMenuClose()">✖</span>
+			</div>
+			<script>
+				function toggleMenuOpen() {
+				  document.getElementById("menuLinks").style.width = "250px";
+				  hamburgerOpen.style.visibility = "hidden";
+        		  hamburgerClose.style.visibility = "visible";
+				}
+				
+				function toggleMenuClose() {
+				  document.getElementById("menuLinks").style.width = "0";
+				  hamburgerOpen.style.visibility = "visible";
+       			  hamburgerClose.style.visibility = "hidden";
+				}
+			</script>
 		</div>
 
 		<div class="hero">
@@ -48,20 +65,20 @@
 			</div>
 			<div class="hero-info">
 				<div class="hero-text">
-					<h1>WELCOME TO LUXURY CARS</h1>
+					<h2>LUXURY CARS</h2>
 					<p>Where cost matches quality.</p>
 				</div>
 			</div>
 			<div class="brands-section">
 				<div>
-					<h3>Our Brands</h3>
+					<h4>Our Brands</h4>
 				</div>
 				<div class="brands">
 					<div>
 						<ul>
-							<li>Mercedes-Benz</li>
-							<li>Volkswagen</li>
 							<li>BMW</li>
+							<li>Volkswagen</li>
+							<li>Mercedes-Benz</li>
 						</ul>
 					</div>
 					<div>
@@ -88,7 +105,6 @@
 				</div>
 			</div>
 		</div>
-
 	</section>
 <!--CARD SECTION-->
 	<section class="Card" id="buy">
@@ -189,8 +205,8 @@
 	</section>
 <!--BUY SECTION-->
 <section class="buy-section" id="view">
-	<diV class="buy-section-h3">
-		<h3>Make your Order here</h3>
+	<diV class="buy-section-h4">
+		<h4>Make your Order here</h4>
 	</diV>
 	<diV class="order-section">
 		<diV class="order-table">
@@ -256,6 +272,7 @@
 					<td>Ksh. 1.5M</td>
 					<td>1 Year</td>
 					<td>20</td>
+				</tr>
 				<tr>
 					<td>Chevrolet</td>
 					<td>Ksh. 4.1M</td>
@@ -268,97 +285,76 @@
 					<td>1 Year</td>
 					<td>2</td>
 				</tr>
-
 			</table>
 		</diV>
 		<diV class="purchases">
-			<div class="row">
 			<div class="col-75">
-				<div class="container">
-					<form action="luxury.php" method="POST" autocomplete="on">
-						<div class="row">
-							<div class="col-50">
-								<h3>Billing</h3>
-								<!--<span class="input-error">* Required fields.</span>-->
-								<label for="fname"><i class="fa fa-user"></i> Full Name</label>
-								<input type="text" id="fname" name="fullname" placeholder="Enter name" required>
-								<span class="input-error">*</span>
-								<label for="phone"><i class="fa fa-user"></i>Phone No.</label>
-								<input type="tel" id="phone" name="phone" placeholder="Tel. No." required pattern="+254xxx">
-								<span class="input-error">*</span>
-								<label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-								<input type="text" id="adr" name="addressno" placeholder="Your address" required>
-								<!--<span class="input-error">*</span>
-								<label for="taxId"><i class="fa fa-address-card-o"></i> Tax ID</label>
-								<input type="text" id="adr" name="taxId" placeholder="Your Tax ID">-->
-							</div>
+				<form action="luxury.php" method="POST" autocomplete="on">
+					<div class="row">
+						<div class="col-50">
+							<h3>Billing</h3>
+							<span class="input-error">* Required fields.</span>
+							<label for="fname"><i class="fa fa-user"></i> Full Name</label>
+							<input type="text" id="fname" name="fullname" placeholder="Enter name" required>
+							<span class="input-error">*</span>
+							<label for="phone"><i class="fa fa-user"></i>Phone No.</label>
+							<input type="tel" id="phone" name="phone" placeholder="Tel. No." required pattern="+254xxx">
+							<span class="input-error">*</span>
+							<label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+							<input type="text" id="adr" name="addressno" placeholder="Your address" required>
+						</div>
 
-							<div class="col-50 right-details">
-								<label for="ID"><i class="fa fa-address-card-o"></i> ID No.</label>
-								<input type="text" id="ID" name="ID" placeholder="Your ID No." required>
-								<span class="input-error">*</span>
-								<label for="email"><i class="fa fa-envelope"></i> Email</label>
-								<input type="text" id="email" name="email" placeholder="someone@example.com" required>
-								<span class="input-error">*</span>
-								<label for="city"><i class="fa fa-institution"></i> City</label>
-								<input type="text" id="city" name="city" placeholder="Nairobi">
-								<div class="row">
-								<div class="col-50">
-									<label for="Brand">Choose Brand</label>
-									<select name="Brand" id="Brand">
-										<option value="Audi">Audi</option>
-										<option value="Jaguar">Jaguar</option>
-										<option value="Jeep">Jeep</option>
-										<option value="Volkswagen">Volkswagen</option>
-										<option value="Lexus">Lexus</option>
-										<option value="Toyota">Toyota</option>
-										<option value="Honda">Honda</option>
-									</select>
-								</div>
-								<div class="col-50">
-									<label for="transmission">Choose Transmission</label>
-									<select name="transmission" id="transmission">
-										<option value="automatic">Automatic</option>
-										<option value="manual">Manual</option>
-									</select>
-								</div>
-								</div>
+						<div class="col-50 right-details">
+							<label for="ID"><i class="fa fa-address-card-o"></i> ID No.</label>
+							<input type="text" id="ID" name="ID" placeholder="Your ID No." required>
+							<span class="input-error">*</span>
+							<label for="email"><i class="fa fa-envelope"></i> Email</label>
+							<input type="text" id="email" name="email" placeholder="someone@example.com" required>
+							<span class="input-error">*</span>
+							<label for="city"><i class="fa fa-institution"></i> City</label>
+							<input type="text" id="city" name="city" placeholder="Nairobi">
+							<div class="row">
+							<div class="col-50">
+								<label for="Brand">Choose Brand</label>
+								<select name="Brand" id="Brand">
+									<option value="Audi">Audi</option>
+									<option value="Jaguar">Jaguar</option>
+									<option value="Jeep">Jeep</option>
+									<option value="Volkswagen">Volkswagen</option>
+									<option value="Lexus">Lexus</option>
+									<option value="Toyota">Toyota</option>
+									<option value="Honda">Honda</option>
+								</select>
 							</div>
-							<div class="payment">
-								<h3>Payment</h3>
-								<label for="fname">Accepted Cards</label>
-								<div class="icon-container">
-								<i class="fa fa-cc-visa" style="color:navy;"></i>
-								<i class="fa fa-cc-amex" style="color:blue;"></i>
-								<i class="fa fa-cc-mastercard" style="color:red;"></i>
-								<i class="fa fa-cc-discover" style="color:orange;"></i>
-								</div>
-								<label for="ccnum">Credit card number</label>
-								<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+							<div class="col-50">
+								<label for="transmission">Choose Transmission</label>
+								<select name="transmission" id="transmission">
+									<option value="automatic">Automatic</option>
+									<option value="manual">Manual</option>
+								</select>
+							</div>
 							</div>
 						</div>
-						<div class="checkbox">
-							<label for="">Confirm that you have entered the correct details before submitting.
-							</label>
-						</div>
-						<div class="btn-buy-reset">
-							<!--<div class="dropdown">
-								<button class="btn btn-primary dropdown-toggle" type="submit" data-bs-toggle="dropdown" aria-expanded="false">
-									Mode of Payment
-								</button>
-								<ul class="dropdown-menu">
-									<li><label class="dropdown-item" type="button">VISA</label></li>
-									<li><label class="dropdown-item" type="button">PAYPAL</label></li>
-									<li><label class="dropdown-item" type="button">MASTERCARD</label></li>
-								</ul>
-							</div>-->
-							<div class="res-chk">
-								<button type="submit" class="btn">Submit</button>
-								<!--<button type="submit" class="btn">Reset</button>-->
+						<div class="payment">
+							<h3>Payment</h3>
+							<label for="fname">Accepted Cards</label>
+							<div class="icon-container">
+							<i class="fa fa-cc-visa" style="color:navy;"></i>
+							<i class="fa fa-cc-amex" style="color:blue;"></i>
+							<i class="fa fa-cc-mastercard" style="color:red;"></i>
+							<i class="fa fa-cc-discover" style="color:orange;"></i>
 							</div>
+							<label for="ccnum">Credit card number</label>
+							<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
 						</div>
-					</form>
-				</div>
+					</div>
+					<div class="btn-buy-reset">
+						<div class="res-chk">
+							<button type="submit" class="btn">Submit</button>
+							<!--<button type="submit" class="btn">Reset</button>-->
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</diV>
